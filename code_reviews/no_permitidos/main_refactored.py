@@ -3,13 +3,12 @@
 NOT_ALLOWED = "!\"#$%&\\\'()*+,-./:;<=>?@[]^_`{|}~©®°¦±¼½¾"
 
 
-def sol(s):
+def sol(s: str) -> str:
     return "".join(c for c in s if c not in NOT_ALLOWED)
 
 
 def main():
-    entrada = input("Entrada: ")
-    print(sol(entrada))
+    print(sol(input("Entrada: ")))
 
 
 if __name__ == "__main__":
