@@ -2,6 +2,7 @@
 """
 from datetime import timedelta
 from typing import List
+from prototools.validators import validate_time
 
 
 def sumar_hora(tiempos: List[str]) -> str:
@@ -14,4 +15,5 @@ def sumar_hora(tiempos: List[str]) -> str:
 
 if __name__ == "__main__":
     tiempos = ["01:30:50", "04:20:30", "02:10:10"]
+    tiempos = [validate_time(t) for t in tiempos]
     print(sumar_hora(tiempos)) # output: 8:01:30
