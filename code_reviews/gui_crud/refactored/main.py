@@ -40,7 +40,10 @@ class MainWindow(Tk):
         self.login.confirm.config(command=self.autorizado)
 
     def autorizado(self):
-        if self.login.user.get() == "admin" and self.login.password.get() == "123":
+        if (
+            self.login.user.get() == "admin" and
+            self.login.password.get() == "123"
+        ):
             self.geometry("1200x400")
             for w in self.winfo_children():
                 w.destroy()
