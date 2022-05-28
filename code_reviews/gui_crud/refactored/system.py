@@ -22,33 +22,22 @@ class App(Frame):
         super().__init__(master)
         self.master = master
         self.frame = master
-        self.draw_entry()
-        self.draw_buttons()
-        self.draw_labels()
+        self.setup_ui()
         self.draw_lists()
 
-
-    def draw_labels(self):
+    def setup_ui(self):
         Label(self.frame, **CFG["lbl"],text="Nombre").place(x=60, y=110)
         Label(self.frame, **CFG["lbl"], text="Run").place(x=60, y=160)
         Label(self.frame, **CFG["lbl"], text="Fecha").place(x=60, y=210)
         Label(self.frame, **CFG["lbl"], text="Descripcion").place(x=60, y=260)
-
-    def draw_entry(self):
-        self.txt_name = Entry(
-            self.frame,font=('Arial', 12),relief="flat", background="#E7E7E7")
-        self.txt_rut = Entry(
-            self.frame,font=('Arial', 12),relief="flat", background="#E7E7E7")
-        self.txt_date = Entry(
-            self.frame,font=('Arial', 12),relief="flat", background="#E7E7E7")
-        self.txt_desc = Entry(
-            self.frame,font=('Arial', 12),relief="flat", background="#E7E7E7")
+        self.txt_name = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
+        self.txt_rut = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
+        self.txt_date = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
+        self.txt_desc = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
         self.txt_name.place(x=140, y=110, height=25, width=150)
         self.txt_rut.place(x=140, y=160, height=25, width=150)
         self.txt_date.place(x=140, y=210, height=25, width=150)
         self.txt_desc.place(x=150, y=260, height=25, width=150)
-
-    def draw_buttons(self):
         self.btn_confirm = Button(
             self.frame, foreground="white", text="Guardar", borderwidth=2,
             relief="flat", cursor="hand1", overrelief="raise",

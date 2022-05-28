@@ -13,7 +13,6 @@ class Login(Frame):
     def __init__(self, master=None) -> None:
         super().__init__(master)
         self.master = master
-        #self.config(width=600, height=400)
         self.master["bg"] = "#314252"
         self.setup_ui()
 
