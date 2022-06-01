@@ -1,3 +1,3 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-DATABASE_URI = "postgresql://postgres:root@localhost:5432/ayudaenpythonsql"
+DATABASE_URI = "postgresql://admin:root@localhost:5432/registros"

@@ -8,7 +8,9 @@ import pandas as pd
 import requests
 from typing import Dict
 
-locale.setlocale(locale.LC_TIME, "es")
+from base import engine
+
+locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
 SUBCARPETA = f"{datetime.now().year}-{datetime.now().strftime('%B')}"
 FUENTES = {
     "museos":
@@ -86,7 +88,9 @@ def main():
     ]
     df_conjunto = pd.concat(conjunto)
     df_conjunto.to_csv("conjunto.csv")
-    print(df_conjunto)
+    df_conjunto.to_sql(
+        "registros", con=engine, index=False, if_exists="replace"
+    )
 
 
 if __name__ == "__main__":
