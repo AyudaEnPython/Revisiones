@@ -30,26 +30,18 @@ class App(Frame):
         Label(self.frame, **CFG["lbl"], text="Run").place(x=60, y=160)
         Label(self.frame, **CFG["lbl"], text="Fecha").place(x=60, y=210)
         Label(self.frame, **CFG["lbl"], text="Descripcion").place(x=60, y=260)
-        self.txt_name = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
-        self.txt_rut = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
-        self.txt_date = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
-        self.txt_desc = Entry(self.frame, font=('Arial', 12), **CFG["ent"])
-        self.txt_name.place(x=140, y=110, height=25, width=150)
-        self.txt_rut.place(x=140, y=160, height=25, width=150)
-        self.txt_date.place(x=140, y=210, height=25, width=150)
+        self.txt_name = Entry(self.frame, **CFG["ent"])
+        self.txt_rut = Entry(self.frame, **CFG["ent"])
+        self.txt_date = Entry(self.frame, **CFG["ent"])
+        self.txt_desc = Entry(self.frame, **CFG["ent"])
+        self.txt_name.place(x=150, y=110, height=25, width=150)
+        self.txt_rut.place(x=150, y=160, height=25, width=150)
+        self.txt_date.place(x=150, y=210, height=25, width=150)
         self.txt_desc.place(x=150, y=260, height=25, width=150)
-        self.btn_confirm = Button(
-            self.frame, foreground="white", text="Guardar", borderwidth=2,
-            relief="flat", cursor="hand1", overrelief="raise",
-            background="#0051C8",
-        )
-        self.btn_cancel = Button(
-            self.frame, text="Cancelar",foreground="white", borderwidth=2,
-            relief="flat", cursor="hand1", overrelief="raise",
-            background="#E81123",
-        )
-        self.btn_confirm.place(x=750, y=340, width=90)
-        self.btn_cancel.place(x=850, y=340, width=90)
+        self.confirm = Button(self.frame, text="Guardar", **CFG["btn"])
+        self.cancel = Button(self.frame, text="Cancelar", **CFG["btn_cancel"])
+        self.confirm.place(x=750, y=340, width=90)
+        self.cancel.place(x=850, y=340, width=90)
 
     def load_image(self):
         Label(
@@ -111,7 +103,7 @@ class App(Frame):
         messagebox.showinfo(
             title="Actualizacion", message="Se han actualizado los datos",
         )
-        self.ClearList()
+        self.clear_list()
         self.draw_lists()
         self._clear_entry()
 
@@ -119,15 +111,12 @@ class App(Frame):
         messagebox.showinfo(
             title="Actualizacion", message="Se han actualizado los datos",
         )
-        self.ClearList()
+        self.clear_list()
         self.draw_lists()
         self._clear_entry()
 
-    def ClearList(self):
+    def clear_list(self):
         self.list_elemts.delete(*self.list_elemts.get_children())
-
-    def canceProcess(self):
-        self._clear_entry()
     
     def _clear_entry(self):
         self.name.set("")
@@ -139,6 +128,6 @@ class App(Frame):
         messagebox.showinfo(
             title="Alerta", message="Se inserto correctamente!",
         )
-        self.ClearList()
+        self.clear_list()
         self.draw_lists()
         self._clear_entry()
