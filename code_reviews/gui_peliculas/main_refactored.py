@@ -1,22 +1,25 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from tkinter import Tk, Button, Label
+from tkinter import Tk, Button, Label, Frame
 
 generos = "Accion", "Drama", "Comedia"
 peliculas = (
-    ("La mascara", "El señor de los cielos", "Jumanji"),
-    ("juegos de la muerte", "la momia ", "terminator"),
+    "La mascara", "El señor de los cielos", "Jumanji",
+    "juegos de la muerte", "la momia ", "terminator",
 )
 
 
-def setup_buttons(root):
+def setup_buttons(root, w=25, h=12):
+    genre = Frame(root)
+    movies = Frame(root)
     for i, genero in enumerate(generos):
-        Button(root, text=genero, width=9, height=2).grid(row=1, column=i)
+        Button(genre, text=genero, width=9, height=2).grid(row=1, column=i)
     for i, pelicula in enumerate(peliculas):
-        for j, pelicula in enumerate(peliculas[i]):
-            Button(
-                root, text=pelicula, width=25, height=15
-            ).grid(row=i + 3, column=j)
+        Button(
+            movies, text=pelicula, width=w, height=h,
+        ).grid(row=2 + i // 2, column=i % 2, padx=15, pady=10)
+    genre.grid(row=0, column=0)
+    movies.grid(row=1, column=1)
 
 
 if __name__ == """__main__""":
