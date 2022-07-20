@@ -7,21 +7,21 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Index page"
+    return "Ayuda en Python"
 
 
-@app.route("/post/<id_>", methods=["POST", "GET"])
+@app.route("/post/<id_>", methods=["GET", "POST"])
 def post(id_):
-    if request.method == "POST":
+    if request.method == "GET":
         return f"Post id: {id_}"
     else:
-        return f"This is a GET request"
+        return f"This isn't a GET request"
 
 
-@app.route("/user", methods=["POST", "GET"])
+@app.route("/user", methods=["GET", "POST"])
 def user():
     return {
-        "username": "Ayuda en Python",
+        "username": "AyudaEnPython",
         "email": "support@ayudaenpython.com",
     }
 

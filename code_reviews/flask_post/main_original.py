@@ -7,7 +7,6 @@ app = Flask(__name__)
 def index():
     return 'hola mundo'
 
-
 @app.route('/post/<post_id>', methods=['GET', 'POST'])
 def lala(post_id):
     if request.method == 'POST':
