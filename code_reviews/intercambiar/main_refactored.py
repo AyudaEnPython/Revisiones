@@ -7,7 +7,8 @@ from prototools import show_matrix, text_align
 
 
 def intercambiar(arr: List[List[str]]) -> List[List[str]]:
-    arr_ = [_[:] for _ in arr] # arr_ = deepcopy(x)
+    # arr_ = deepcopy(x)
+    arr_ = [_[:] for _ in arr] 
     arr_[0][2] = arr[1][2]
     return arr_
 
