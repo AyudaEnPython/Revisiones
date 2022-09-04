@@ -6,7 +6,7 @@ titulo = "Streaming Movie"
 generos = "Accion", "Drama", "Comedia"
 peliculas = (
     "La Máscara", "El Señor de los Cielos", "Jumanji",
-    "Juegos de la Muerte", "La Momia ", "Terminator",
+    "Juegos de la Muerte", "La Momia ", "Terminator", 
 )
 
 
