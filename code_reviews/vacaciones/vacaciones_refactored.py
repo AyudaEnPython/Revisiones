@@ -4,6 +4,7 @@ Solucion completa en:
 https://github.com/AyudaEnPython/Soluciones/blob/main/ejercicios/vacaciones.py
 """
 
+
 def registrar():
     nombre = input("Nombre y Apellido: ")
     while True:
