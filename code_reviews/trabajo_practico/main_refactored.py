@@ -46,7 +46,7 @@ def area(base: float, altura: float) -> float:
 
 # --------------------------------------------------------- Ejercicio 2
 def puntaje(
-    g: int, p: int, e: int, d: Tuple[int, int , int] = (3, 0, 1)
+    g: int, p: int, e: int, d: Tuple[int, int, int] = (3, 0, 1)
 ) -> int:
     return g * d[0] + p * d[1] + e * d[2]
 
@@ -99,7 +99,7 @@ def par_impar_rango(x: int) -> None:
         n = _ingresar_n(f"[{i+1}] Ingrese el número: ")
         if es_par(n):
             p += 1
-            sp +=n
+            sp += n
         else:
             si += n
     print(f"Cantidad de pares: {p}")
@@ -110,4 +110,6 @@ def par_impar_rango(x: int) -> None:
 # --------------------------------------------------------- Ejercicio 8
 def cuadrado_cubo(x: int = 10) -> None:
     for i in range(x):
-        print(f"valor: {i * 2}, cuadrado: {(i * 2) ** 2}, cubo: {(i * 2) ** 3}")
+        print(
+            f"valor: {i * 2}, cuadrado: {(i * 2) ** 2}, cubo: {(i * 2) ** 3}"
+        )

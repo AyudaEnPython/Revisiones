@@ -15,4 +15,4 @@ def sumar_hora(tiempos: List[str]) -> str:
 
 if __name__ == "__main__":
     tiempos = ["01:30:50", "04:20:30", "02:10:10"]
-    print(sumar_hora([validate_time(t) for t in tiempos])) # output: 8:01:30
+    print(sumar_hora([validate_time(t) for t in tiempos]))  # output: 8:01:30
