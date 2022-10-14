@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-#!/user/bin/env python
+# !/user/bin/env python
 # -*- coding: utf-8 -*-
 from argparse import ArgumentParser
 # pip install prototools

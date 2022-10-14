@@ -9,7 +9,7 @@ def sin_repeticion(x: List[float], y: List[float]) -> List[float]:
 
 def main():
     msg = "Ingresar elementos de {} separados por comas: "
-    get_data = lambda s: input(s).split(",")
+    get_data = lambda s: input(s).split(",")  # noqa: E731
     x, y = get_data(msg.format("X")), get_data(msg.format("Y"))
     print(*sin_repeticion(x, y), sep=", ")
 
