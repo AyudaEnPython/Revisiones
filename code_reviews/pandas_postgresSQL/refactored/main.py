@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from datetime import datetime
 import locale
 import os
@@ -43,7 +43,7 @@ COLUMNAS = {
 }
 
 
-def fname (categoria: str) -> str:
+def fname(categoria: str) -> str:
     return os.path.join(
         os.getcwd(), categoria, SUBCARPETA,
         f"{categoria}-{datetime.now().strftime('%d-%m-%Y')}.csv",

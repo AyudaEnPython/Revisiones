@@ -22,7 +22,7 @@ alienigenas. Uno de estos, ataca a tu companero y se lo lleva de vuelta a su
 celda. Tu logras pasar desaperecibido escondido entre las sombras. Luego de
 cruzar este cuarto hay un pasillo. Al final de este hay 2 caminos por los que
 puedes seguir: Una puerta semi-abierta, o una escotilla en el suelo en la cual
-puedes saltar. 
+puedes saltar.
 """
 PARRAFOS = (
     """
@@ -44,7 +44,7 @@ PARRAFOS = (
     pregunta lo siguiente:
     """,
     """
-    Has {} el palo, sigamos adelante.    
+    Has {} el palo, sigamos adelante.
     """
 )
 
