@@ -3,8 +3,8 @@
 # pip install prototools
 from prototools.protosql import ProtoSqlite, execute, get_q
 
-DATABASE = "data.db"
-TABLE = "automotora"
+DATABASE = "automotora.db"
+TABLE = "automovil"
 ejecutar = execute
 
 
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     db.create_table(
         TABLE, 
         (
-            "patente TEXT, modelo TEXT, year TEXT, "
-            "estado TEXT, kilometraje TEXT, combustion TEXT"
+            "patente TEXT, marca TEXT, año TEXT, "
+            "kilometraje TEXT, tipo_combustion TEXT"
         )
     )
