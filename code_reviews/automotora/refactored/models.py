@@ -22,6 +22,6 @@ class Vehiculo:
         )
 
     def __str__(self):
-        return (
+        return "\n".join(
             f"{k}: {v}" for k, v in self.__dict__.items()
         )
