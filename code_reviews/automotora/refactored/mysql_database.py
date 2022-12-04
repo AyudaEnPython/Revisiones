@@ -20,13 +20,13 @@ class Database:
         self._table = TABLE
     
     def insertar(self, obj):
-        self.db.add(self._table, obj.__dict__)
+        self.db.insert(self._table, obj.to_dict())
 
     def eliminar(self, pk):
         self.db.delete(self._table, f"patente='{pk}'")
 
     def actualizar(self, obj):
-        self.db.update_(self._table, get_q(obj), f"patente='{obj.patente}'")
+        self.db.update(self._table, get_q(obj), f"patente='{obj.patente}'")
 
     def seleccionar(self, pk):
         return self.db.select(self._table, f"patente='{pk}'")

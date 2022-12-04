@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -20,6 +20,9 @@ class Vehiculo:
             input("Kilometraje: "),
             input("Tipo de combustible: "),
         )
+
+    def to_dict(self):
+        return asdict(self)
 
     def __str__(self):
         return "\n".join(
