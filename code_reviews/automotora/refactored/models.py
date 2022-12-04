@@ -9,16 +9,16 @@ class Vehiculo:
     marca: str
     año: str
     kilometraje: str
-    tipo_combustion: str
+    tipo_combustible: str
 
     @classmethod
     def get_cli(cls, patente):
         return cls(
             patente,
-            input("Modelo: "),
+            input("Marca: "),
             input("Año: "),
             input("Kilometraje: "),
-            input("Tipo de combustión: "),
+            input("Tipo de combustible: "),
         )
 
     def __str__(self):
