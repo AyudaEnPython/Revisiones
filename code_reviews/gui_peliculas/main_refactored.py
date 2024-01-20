@@ -10,7 +10,7 @@ peliculas = (
 )
 
 
-def setup_ui(root, w=25, h=12):
+def setup_ui(root, w=25, h=12, n=2):
     genre = Frame(root)
     movies = Frame(root)
     Label(root, text=titulo).grid(row=0, column=0)
@@ -21,7 +21,7 @@ def setup_ui(root, w=25, h=12):
     for i, pelicula in enumerate(peliculas):
         Button(
             movies, text=pelicula, width=w, height=h,
-        ).grid(row=2 + i // 2, column=i % 2, padx=15, pady=10)
+        ).grid(row=2 + i // n, column=i % n, padx=15, pady=10)
     genre.grid(row=1, column=0)
     movies.grid(row=2, column=1)
 
