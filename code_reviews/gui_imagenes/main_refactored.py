@@ -5,8 +5,8 @@ ITEMS = ("pizza", "tomahawk", "jamon")
 
 class Card(Frame):
 
-    def __init__(self, master, filename, orientation):
-        super().__init__(master)
+    def __init__(self, filename, orientation):
+        super().__init__()
         self.value = IntVar() 
         self.photo = PhotoImage(file=f"images/{filename}.gif")
         Label(self, image=self.photo).pack()
@@ -24,7 +24,7 @@ class App(Tk):
 
     def setup_ui(self):
         for item in ITEMS:
-            card = Card(self, item, "right")
+            card = Card(item, "right")
             card.pack(side="left")
             self.cards.append(card)
 
