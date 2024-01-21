@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Checkbutton, Label, PhotoImage, Tk
 
 root = Tk()
 
