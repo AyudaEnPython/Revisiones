@@ -1,4 +1,5 @@
 # Revisiones
+
 Repositorio de revisiones de código (comunidad AyudaEnPython) de diversos niveles (principiante, intermedio, avanzado).
 
 # Revisiones
@@ -7,18 +8,19 @@ Repositorio de revisiones de código (comunidad AyudaEnPython) de diversos nivel
 ![GitHub repo size](https://img.shields.io/github/repo-size/AyudaEnPython/revisiones)
 ![GitHub languages](https://img.shields.io/github/languages/top/AyudaEnPython/revisiones)
 ![Github last-commit](https://img.shields.io/github/last-commit/AyudaEnPython/revisiones)
-![maintenance](https://img.shields.io/maintenance/yes/2023)
+![maintenance](https://img.shields.io/maintenance/yes/2024)
 
-     _____           _        _____        _____     _   _           
-    |  _  |_ _ _ _ _| |___   |   __|___   |  _  |_ _| |_| |_ ___ ___ 
+     _____           _        _____        _____     _   _
+    |  _  |_ _ _ _ _| |___   |   __|___   |  _  |_ _| |_| |_ ___ ___
     |     | | | | | . | .'|  |   __|   |  |   __| | |  _|   | . |   |
     |__|__|_  |___|___|__,|  |_____|_|_|  |__|  |_  |_| |_|_|___|_|_|
-          |___|                                 |___|                
+          |___|                                 |___|
 
 Repositorio de revisiones de la comunidad [Ayuda en Python](https://www.facebook.com/groups/ayudaenpython/).
 
 Conforme se vayan agregando más revisiones de código, la estructura del repositorio irá cambiando.
-> __*Nota*__: Algunas revisiones fueron movidas desde otro repositorio (revisar los enlaces).
+
+> **_Nota_**: Algunas revisiones fueron movidas desde otro repositorio (revisar los enlaces).
 
 ## Repositorios
 
