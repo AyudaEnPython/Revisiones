@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from tkinter import Checkbutton, Frame, IntVar, Label, PhotoImage, Tk
 
 ITEMS = ("pizza", "tomahawk", "jamon")
