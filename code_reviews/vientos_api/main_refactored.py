@@ -40,7 +40,7 @@ def get_data(params):
 
 def main():
     text_align("Start")
-    for y in range(2008, 2011):
+    for y in range(2008, 2020):
         with pd.ExcelWriter(f"{y}.xlsx") as w:
             for m in progressbar(range(1, 13)):
                 data = get_data(set_params(y, m))
