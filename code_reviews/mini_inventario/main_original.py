@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 print()
 print('Programa de inventario para Ultramarinos  🥝')
 print('--' * 30)

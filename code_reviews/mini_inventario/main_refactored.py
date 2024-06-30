@@ -1,3 +1,5 @@
+"""AyudaEnPython: https://www.facebook.com/groups/ayudapython
+"""
 from dataclasses import dataclass
 from typing import Union
 # pip install prototools
