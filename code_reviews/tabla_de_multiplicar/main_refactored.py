@@ -14,5 +14,5 @@ print("\r")
 for i in range(1, 11):
     print("|", end="")
     for j in range(start, end+1):
-        print(f"{i:>2} x {j:>2} = {i*j:^3}", end=" | ")
+        print(f"{j:>2} x {i:>2} = {i*j:^3}", end=" | ")
     print()
