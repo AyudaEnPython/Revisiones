@@ -1,6 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
-from typing import Dict, List, Tuple, Union
+from typing import Dict, Tuple, Union
 # pip install prototools
 from prototools import (
     int_input,
@@ -12,7 +12,7 @@ from prototools import (
     ProtoDB,
 )
 
-Payroll = List[Dict[str, Union[str, float]]]
+Payroll = Dict[str, Dict[str, Union[str, float]]]
 HEADERS = ["Id", "Name", "Department", "Salary"]
 
 
