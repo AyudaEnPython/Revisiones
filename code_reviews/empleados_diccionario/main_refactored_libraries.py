@@ -19,7 +19,7 @@ HEADERS = ["Id", "Name", "Department", "Salary"]
 def get_id(data: Payroll) -> Tuple[bool, Union[str, None]]:
     while True:
         _id = int_input(
-            "Employeed id: ", min=0, max=9999)
+            "Employee id: ", min=0, max=9999)
         _id = str(_id).rjust(4, '0')
         if _id in data:
             return True, _id
