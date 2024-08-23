@@ -18,7 +18,8 @@ Repositorio de revisiones de la comunidad [Ayuda en Python](https://www.facebook
 
 Conforme se vayan agregando más revisiones de código, la estructura del repositorio irá cambiando.
 
-> **_Nota_**: Algunas revisiones fueron movidas desde otro repositorio (revisar los enlaces).
+> [!NOTE]
+> Algunas revisiones fueron movidas desde otro repositorio (revisar los enlaces).
 
 ## Repositorios
 
