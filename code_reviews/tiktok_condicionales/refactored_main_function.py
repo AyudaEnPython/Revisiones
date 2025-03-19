@@ -10,7 +10,7 @@ class Threshold(float, Enum):
 
 
 def is_famous(followers: int, following: int, likes: int) -> bool:
-    influence = (followers/ (followers + following)) * 100
+    influence = (followers / (followers + following)) * 100
     ratio = following / followers
     interaction = (likes / followers) * 100
     if (

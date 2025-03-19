@@ -7,7 +7,7 @@ followers = int(input(f"¿Cuántos seguidores tiene '{user}'?\n> "))
 following = int(input(f"¿A cuántos(as) sigue '{user}'?\n> "))
 likes = int(input(f"¿Cuántos 'Me Gusta' tiene '{user}'?\n> "))
 
-influence = (followers/ (followers + following)) * 100
+influence = (followers / (followers + following)) * 100
 ratio = following / followers
 interaction = (likes / followers) * 100
 
