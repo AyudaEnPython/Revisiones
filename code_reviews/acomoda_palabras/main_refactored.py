@@ -1,11 +1,12 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
+
+NOTE: 'acomoda las palabras' no refleja el propósito real del código.
 """
 from random import choice
 
 
 def jugar(palabras, intentos):
-    secreta = choice(palabras)
-    reveladas = set()
+    secreta, reveladas = choice(palabras), set()
     print(f"La palabra seleccionada tiene {len(secreta)} letras.")
     for intento in range(1, intentos+1):
         pista = choice([letra for letra in secreta if letra not in reveladas])

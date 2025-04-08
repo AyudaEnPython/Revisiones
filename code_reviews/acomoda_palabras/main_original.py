@@ -1,5 +1,6 @@
 """AyudaEnPython: https://www.facebook.com/groups/ayudapython
 """
+#sORT ACOMODA LAS PALABRAS
 import random
 while True:
     Opcion = input("Quieres seguir jugando? si/no").upper()
