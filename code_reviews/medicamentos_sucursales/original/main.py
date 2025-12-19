@@ -20,13 +20,13 @@ def add_datos(sucursales: int, pacientes: int)-> bool:
 
     SUCURSALES["Total"] = sucursales
     PACIENTES["Total"] = pacientes
-    
+
     return False
 
 def add_medicamento(sucursal: int, cantidad: int) -> bool:
     if cantidad < 1:
         raise ValueError("cantidad erronea, inténtelo de nuevo")
-    
+
     SUCURSALES[sucursal] = cantidad
     SUCURSALES_T[sucursal] = cantidad
 
@@ -36,14 +36,14 @@ def repartir(sucursal: int, cantidad: int):
     SUCURSALES[sucursal] -= cantidad
 
 def get_min_max():
-    # Creamos un nuevo diccionaro en base a SUCURSALES pero ordenado 
+    # Creamos un nuevo diccionaro en base a SUCURSALES pero ordenado
     dict_ord = {key: val for key, val in sorted(SUCURSALES.items(), key=lambda dato: dato[1])}
     # Lo convertimos  a lista para obtener el mínimo y máximo
     lista = list(dict_ord.items())
 
     min = lista[0]
     max = lista[-1]
-    
+
     return min, max
 
 def calc_porcentaje(total: int, valor: int):
@@ -53,7 +53,7 @@ def calc_porcentaje(total: int, valor: int):
 
 
 def add_paciente(paciente: int, sucursal: int, sistolica: int, diastolica: int):
-    
+
     datos = []
     for diagnostico in TABLA:
         if sistolica <= diagnostico[0] and diastolica <= diagnostico[1]:
@@ -61,25 +61,25 @@ def add_paciente(paciente: int, sucursal: int, sistolica: int, diastolica: int):
             datos.extend([sucursal,
                           diagnostico[2], # Nombre del Diagnostico ejem. HTA Grado 1
                           diagnostico[3], # Tipo de Medicamento
-                          diagnostico[4]  # Dosis  
+                          diagnostico[4]  # Dosis
                           ])
 
             break
 
     PACIENTES[paciente] = datos
-    
+
 def main():
-    
+
     seguir = True
     is_datos = False
     is_med = False
-    while seguir:   
+    while seguir:
         try:
             if is_datos == False:
                 c_sucursales, c_pacientes = [int(dato) for dato in (input("Ingrese datos: ").split())]
                 seguir = add_datos(c_sucursales, c_pacientes)
             is_datos = True
-            
+
             #Agregamos uno por uno la informacion de la sucursal
             if is_med == False:
                 for sucursal in range(1, SUCURSALES["Total"] + 1):
@@ -100,7 +100,7 @@ def main():
 
     # Quitamos los medicamentos utilizados
     for paciente, diagnostico in PACIENTES.items():
-        if not paciente == "Total": 
+        if not paciente == "Total":
             repartir(diagnostico[0], diagnostico[3])
 
     SUCURSALES.pop("Total") # Eliminamos el elemento, ya no sirve y causará problemas
