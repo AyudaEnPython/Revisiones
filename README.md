@@ -4,7 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/AyudaEnPython/revisiones)
 ![GitHub languages](https://img.shields.io/github/languages/top/AyudaEnPython/revisiones)
 ![Github last-commit](https://img.shields.io/github/last-commit/AyudaEnPython/revisiones)
-![maintenance](https://img.shields.io/maintenance/yes/2024)
+![maintenance](https://img.shields.io/maintenance/yes/2025)
 
 Repositorio de revisiones de código (comunidad AyudaEnPython) de diversos niveles (principiante, intermedio, avanzado).
 
