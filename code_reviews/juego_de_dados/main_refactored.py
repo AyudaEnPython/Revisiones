@@ -4,6 +4,7 @@ from random import randint
 from typing import Any, Callable
 
 Choice = tuple[str, str]
+Roll = tuple[int, int]
 Players = list[str]
 Scores = list[int]
 Leaderboard = dict[str, Scores]
@@ -45,7 +46,7 @@ def bool_input(
 
 
 def init_players(quantity: int) -> Players:
-    players = []
+    players: Players = []
     for n in range(1, quantity + 1):
         while True:
             nickname = _safe_io(input, f"Player {n:02d} nickname: ").strip()
@@ -60,17 +61,14 @@ def init_players(quantity: int) -> Players:
     return players
 
 
-def roll_dice(turn: int) -> int:
-    a, b = randint(1, 6), randint(1, 6)
-    total = a + b
-    print(f"Roll {turn}: {a} and {b} (Sum: {total})")
-    return total
+def roll_dice() -> Roll:
+    return randint(1, 6), randint(1, 6)
 
 
 def play_turn(nickname: str) -> Scores:
     print(f"\n--- {nickname}'s Turn ---")
-    scores = []
-    running_score = 0
+    scores: Scores = []
+    running_score: int = 0
     for turn in range(1, MAX_TURNS + 1):
         if turn > MANDATORY_ROLLS:
             if running_score >= MAX_SCORE:
@@ -78,9 +76,11 @@ def play_turn(nickname: str) -> Scores:
             print(f"Current accumulated score: {running_score}")
             if not bool_input("Do you want to roll again?"):
                 break
-        roll = roll_dice(turn)
-        scores.append(roll)
-        running_score += roll
+        a, b = roll_dice()
+        total = a + b
+        print(f"Roll {turn}: {a} and {b} (Sum: {total})")
+        scores.append(total)
+        running_score += total
         if running_score >= MAX_SCORE:
             break
     print(f"Roll history: {', '.join(map(str, scores))}")
@@ -91,8 +91,8 @@ def play_turn(nickname: str) -> Scores:
 
 
 def _sorted_results(leaderboard: Leaderboard) -> Results:
-    valid_entries = []
-    busted_entries = []
+    valid_entries: Result = []
+    busted_entries: Result = []
     for name, scores in leaderboard.items():
         total = sum(scores)
         if total <= MAX_SCORE:
@@ -135,16 +135,16 @@ def validate_config() -> bool:
     return True
 
 
-def main():
+def main() -> None:
     if not validate_config():
         print("System Configuration Error: Check rule bounds.")
         return
-    quantity = int_input("Number of players: ")
+    quantity: int = int_input("Number of players: ")
     if quantity <= 0:
         print("You need at least 1 player to start the match.")
         return
-    players = init_players(quantity)
-    leaderboard = {}
+    players: Players = init_players(quantity)
+    leaderboard: Leaderboard = {}
     for nickname in players:
         leaderboard[nickname] = play_turn(nickname)
     display_results(leaderboard)
